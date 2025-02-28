@@ -10,15 +10,18 @@ Win_colour = ""
 Active = True
 
 while Active:
-    Player_input = int(input("What is your bet (1-36)?"))
+    Player_input = input("What is your bet (1-36)?")
 
     Win_number = rd.randint(1,36)
+
 
     if Win_number in RED:
         Win_colour = "RED"
     elif Win_number in BLACK:
         Win_colour = "BLACK"
 
+    if Player_input.isdigit(): 
+        pass
     print("The winning number is",Win_number,Win_colour)
 
     if Win_number == Player_input:
